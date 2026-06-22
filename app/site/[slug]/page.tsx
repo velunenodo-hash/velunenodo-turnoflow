@@ -37,8 +37,14 @@ export default function PublicBusinessPage() {
 
         <section className="grid min-h-[85vh] items-center gap-10 py-12 md:grid-cols-2">
           <div>
-            <div className="flex h-24 w-24 items-center justify-center rounded-full bg-[#e9dfd0] text-4xl font-bold md:h-32 md:w-32">
-              G
+            <div className="relative w-full h-[320px] md:h-[500px] rounded-3xl overflow-hidden">
+              <img
+                src="/demo/hero.jpg"
+                alt="Glow Esthetic"
+                className="w-full h-full object-cover"
+              />
+
+              <div className="absolute inset-0 bg-black/30" />
             </div>
 
             <p className="mt-8 text-sm uppercase tracking-[0.25em] text-[#867b6d]">
