@@ -71,7 +71,7 @@ export default function PublicBusinessPage() {
           </a>
         </header>
 
-        <section className="grid gap-8 py-10 md:grid-cols-2 md:items-center md:py-16">
+        <section className="grid gap-6 py-8 md:grid-cols-2 md:items-center md:py-12">
           <div className="order-2 md:order-1">
             <p className="text-sm uppercase tracking-[0.25em] text-[#867b6d]">
               {business.city}
@@ -133,7 +133,7 @@ export default function PublicBusinessPage() {
           </div>
 
           <div className="order-1 md:order-2">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] shadow-sm md:aspect-[4/5]">
+            <div className="relative aspect-[4/4] overflow-hidden rounded-[2rem] shadow-sm md:aspect-[4/5]">
               <img
                 src="/demo/hero.jpg"
                 alt="Glow Esthetic"
@@ -153,7 +153,7 @@ export default function PublicBusinessPage() {
         </section>
       </section>
 
-      <section id="services" className="mx-auto max-w-6xl px-5 py-8 md:px-10">
+      <section id="services" className="mx-auto max-w-6xl px-5 py-6 md:px-10">
         <div className="mb-5">
           <p className="text-sm uppercase tracking-[0.25em] text-[#867b6d]">
             Servicios
@@ -168,7 +168,7 @@ export default function PublicBusinessPage() {
           {business.services.map((service) => (
             <article
               key={service.id}
-              className="rounded-[2rem] bg-white p-5 shadow-sm"
+              className="rounded-[1.5rem] bg-white p-4 shadow-sm"
             >
               <div className="flex items-start justify-between gap-4">
                 <div>
@@ -252,10 +252,10 @@ export default function PublicBusinessPage() {
               <img
                 src={member.image}
                 alt={member.name}
-                className="h-64 w-full object-cover"
+                className="h-44 w-full object-cover"
               />
 
-              <div className="p-5">
+              <div className="p-4">
                 <h3 className="text-2xl font-bold">{member.name}</h3>
 
                 <p className="mt-1 text-[#6d6d6d]">{member.role}</p>
@@ -266,7 +266,7 @@ export default function PublicBusinessPage() {
       </section>
 
       <section className="mx-auto max-w-6xl px-5 py-10 md:px-10">
-        <div className="rounded-[2rem] bg-[#1f1f1f] p-7 text-white md:p-10">
+        <div className="rounded-[2rem] bg-[#1f1f1f] p-6 text-white md:p-8">
           <p className="text-sm uppercase tracking-[0.25em] text-[#d9cfc1]">
             Reserva online
           </p>
