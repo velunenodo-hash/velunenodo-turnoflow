@@ -11,16 +11,15 @@ const business = {
   ],
 };
 
-const galleryItems = [
-  "Uñas",
-  "Pestañas",
-  "Cejas",
-  "Facial",
-  "Nail art",
-  "Belleza",
-];
-
 export default function PublicBusinessPage() {
+  const galleryImages = [
+  { title: "Uñas Soft Gel", image: "/demo/nails1.jpg" },
+  { title: "Lifting Pestañas", image: "/demo/lashes1.jpg" },
+  { title: "Facial Premium", image: "/demo/facial1.jpg" },
+  { title: "Nail Art", image: "/demo/nails1.jpg" },
+  { title: "Perfilado Cejas", image: "/demo/facial1.jpg" },
+  { title: "Belleza Integral", image: "/demo/lashes1.jpg" },
+];
   return (
     <main className="min-h-screen bg-[#faf8f4] text-[#1f1f1f]">
       <section className="mx-auto max-w-6xl px-5 py-6 md:px-10">
@@ -114,18 +113,27 @@ export default function PublicBusinessPage() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
-          {galleryItems.map((item) => (
-            <div
-              key={item}
-              className="flex aspect-square items-end rounded-[2rem] bg-[#e9dfd0] p-4"
-            >
-              <span className="rounded-full bg-white/80 px-4 py-2 text-sm font-semibold">
-                {item}
-              </span>
-            </div>
-          ))}
-        </div>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+  {galleryImages.map((item) => (
+    <div
+      key={item.title}
+      className="relative aspect-square overflow-hidden rounded-3xl"
+    >
+      <img
+        src={item.image}
+        alt={item.title}
+        className="h-full w-full object-cover"
+      />
+
+      <div className="absolute inset-0 bg-black/20" />
+
+      <div className="absolute bottom-3 left-3 rounded-full bg-white px-4 py-2 text-sm font-semibold">
+        {item.title}
+      </div>
+    </div>
+  ))}
+</div>
+     
       </section>
 
       <section id="services" className="mx-auto max-w-6xl px-5 py-12 md:px-10">
